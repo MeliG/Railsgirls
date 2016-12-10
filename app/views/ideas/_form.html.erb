@@ -1,3 +1,6 @@
+<div class="panel panel-primary">
+  <div class="panel-heading"><h3 class="panel-title">New Idea</h3></div>
+  <div class="panel-body">
 <%= form_for(@idea) do |f| %>
   <% if @idea.errors.any? %>
     <div id="error_explanation">
@@ -11,13 +14,13 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class:"form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, class:"form-control" %>
   </div>
   <div class="field">
     <%= f.label :picture %><br>
@@ -27,3 +30,5 @@
     <%= f.submit %>
   </div>
 <% end %>
+</div>
+</div>
